@@ -9,23 +9,19 @@
     --font-sans: var(--font-ppMori);
 
     --breakpoint-*: initial;
-    --breakpoint-mobile: 32.5rem  /* 520/16 */
-;
-    --breakpoint-tablet: 48rem  /* 768/16 */
-;
-    --breakpoint-desktop: 64rem  /* 1024/16 */
-;
-    --breakpoint-large: 80rem  /* 1280/16 */
-;
+    --breakpoint-mobile: 32.5rem  /* 520/16 */;
+    --breakpoint-tablet: 48rem  /* 768/16 */;
+    --breakpoint-desktop: 64rem  /* 1024/16 */;
+    --breakpoint-large: 80rem  /* 1280/16 */;
     --breakpoint-xlarge: 90rem  /* 1440/16 */
 ;
 
     --container-*: initial;
-    --container-mobile: calc(var(--breakpoint-mobile) - 2rem);
-    --container-tablet: calc(var(--breakpoint-tablet) - 2rem);
-    --container-desktop: calc(var(--breakpoint-desktop) - 2rem);
-    --container-large: calc(var(--breakpoint-large) - 2rem);
-    --container-xlarge: calc(var(--breakpoint-xlarge) - 2rem);
+    --container-mobile: 30.5rem;
+    --container-tablet: 46rem;
+    --container-desktop: 62rem;
+    --container-large: 78rem;
+    --container-xlarge: 88rem;
 
     --font-ppMori: "PPMori", sans-serif;
     --font-ppPangram: "PPPangram", sans-serif;
