@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "name": "tailwind-4-vite",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write './src/**/*.{html,js,jsx,ts,tsx}'"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,15 @@
+# Prevent all web crawlers from accessing any part of the site
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all web crawlers access to public content
+User-agent: *
+Allow: /
+
+# Prevent specific search engine crawlers (e.g., Googlebot) from accessing certain paths
+User-agent: Googlebot
+Disallow: /example-page/
+
+# Specify the location of the sitemap
+Sitemap: https://www.yourwebsite.com/sitemap.xml
