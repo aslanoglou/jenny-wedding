@@ -4,6 +4,7 @@
 /*@import "tailwindcss/theme.css" layer(theme);*/
 /*@import "tailwindcss/preflight.css" layer(base);*/
 /*@import "tailwindcss/utilities.css" layer(utilities);*/
+@import "@glidejs/glide/src/assets/sass/glide.core.scss";
 
 @theme {
     --font-sans: var(--font-ppMori);
@@ -87,7 +88,9 @@
     font-style: normal;
     font-display: block;
 }
-
+@utility container {
+    padding-inline: 1rem;
+}
 @layer base {
     h1, h2, h3, h4, h5, h6 {
         font-size: unset;
