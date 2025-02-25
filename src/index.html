@@ -9,8 +9,9 @@
     <title>Tailwind Starter</title>
 </head>
 <body class="group" data-scrolled="false">
-<header class="@container/header overflow-x-hidden max-desktop:border-b-1 w-full transition-all duration-300 max-desktop:border-b-black max-w-full mb-4 sticky top-0 bg-white z-50">
+<header class="@container/header overflow-x-hidden max-desktop:border-b-1 w-full transition-all duration-300 max-desktop:border-b-black max-w-full mb-8 sticky top-0 bg-white z-50">
     <div class="px-4 flex py-4 transition-all duration-300 justify-between items-center max-desktop:group-data-[scrolled=true]:py-2 desktop:group-data-[scrolled=true]:py-2">
+        <h1 class="sr-only">The Wedding Issue 2024</h1>
         <a href="/">
             <img src="/imgs/wedding-logo.svg" width="368" height="130" alt="Wedding Issue 2024" class="w-auto max-desktop:group-data-[scrolled=true]:h-[var(--header-logo-height-scrolled)] max-desktop:group-data-[scrolled=false]:h-[var(--header-logo-height-no-scrolled-mobile)]  transition-all duration-300 desktop:group-data-[scrolled=false]:h-[var(--header-logo-height-no-scrolled-desktop)] desktop:group-data-[scrolled=true]:h-[var(--header-logo-height-scrolled)]">
         </a>
@@ -60,48 +61,109 @@
         </ul>
     </div>
 </header>
-<main class="@container/main container max-w-xxlarge large:bg-red-400">
-    <h1 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h1>
-    <h2 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h2>
-    <h3 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h3>
-    <h4 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h4>
-    <h5 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h5>
-    <h6 class="">
-        Hello world!
-        <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-    </h6>
-    <div class="flex flex-row @desktop/main:bg-green-400">
-        <h1 class="">
-            Hello world!
-            <span class="font-icoMoon after:content-[var(--icon-stars)]"></span>
-        </h1>
-    </div>
-</main>
-<div class="@container/second max-w-large mx-auto p-4">
-    <div class="flex flex-row @min-desktop/second:w-[50cqw]">
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-            <span class="font-icoMoon after:content-[var(--icon-stars)]">
 
-            </span>
-        </h1>
-    </div>
-</div>
+<main class="@container/main container max-w-xxlarge">
+    <section class="mb-12 flex gap-8">
+        <div class="tablet:basis-[50%] desktop:flex-auto">
+            <article class="relative">
+                <picture class="">
+                    <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                    <img
+                        alt=""
+                        class=""
+                        width="954"
+                        height="537"
+                        src="https://placehold.co/954x537/2463EB/FFF">
+                </picture>
+                <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                <p>Πόσα από τα παρακάτω έθιμα ήξερες ή είχες ακούσει;</p>
+            </article>
+        </div>
+        <div class="tablet:basis-[50%] desktop:flex-[0_0_500px] bg-red-100 ">
+            <div class="flex flex-wrap gap-8">
+                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
+                    <picture class="">
+                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                        <img
+                                alt=""
+                                class=""
+                                width="954"
+                                height="537"
+                                src="https://placehold.co/954x537/2463EB/FFF">
+                    </picture>
+                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                </article>
+                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
+                    <picture class="">
+                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                        <img
+                                alt=""
+                                class=""
+                                width="954"
+                                height="537"
+                                src="https://placehold.co/954x537/2463EB/FFF">
+                    </picture>
+                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                </article>
+                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
+                    <picture class="">
+                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                        <img
+                                alt=""
+                                class=""
+                                width="954"
+                                height="537"
+                                src="https://placehold.co/954x537/2463EB/FFF">
+                    </picture>
+                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                </article>
+                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
+                    <picture class="">
+                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                        <img
+                                alt=""
+                                class=""
+                                width="954"
+                                height="537"
+                                src="https://placehold.co/954x537/2463EB/FFF">
+                    </picture>
+                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+<!--    <h1 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h1>-->
+<!--    <h2 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h2>-->
+<!--    <h3 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h3>-->
+<!--    <h4 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h4>-->
+<!--    <h5 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h5>-->
+<!--    <h6 class="">-->
+<!--        Hello world!-->
+<!--        <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--    </h6>-->
+<!--    <div class="flex flex-row @desktop/main:bg-green-400">-->
+<!--        <h1 class="">-->
+<!--            Hello world!-->
+<!--            <span class="font-icoMoon after:content-[var(&#45;&#45;icon-stars)]"></span>-->
+<!--        </h1>-->
+<!--    </div>-->
+</main>
+
 </body>
 <script src="./main.js" type="module"></script>
 </html>
