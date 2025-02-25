@@ -4,78 +4,9 @@
 /*@import "tailwindcss/theme.css" layer(theme);*/
 /*@import "tailwindcss/preflight.css" layer(base);*/
 /*@import "tailwindcss/utilities.css" layer(utilities);*/
+
+@import "tailwindcss-animated";
 @import "@glidejs/glide/dist/css/glide.core.min.css";
-
-@theme {
-    --font-sans: var(--font-ppMori);
-
-    --breakpoint-*: initial;
-    --breakpoint-mobile: 32.5rem  /* 520/16 */;
-    --breakpoint-tablet: 48rem  /* 768/16 */;
-    --breakpoint-desktop: 64rem  /* 1024/16 */;
-    --breakpoint-large: 80rem  /* 1280/16 */;
-    --breakpoint-xlarge: 90rem  /* 1440/16 */
-;
-
-    --container-*: initial;
-    --container-mobile: 30.5rem;
-    --container-tablet: 46rem;
-    --container-desktop: 62rem;
-    --container-large: 78rem;
-    --container-xlarge: 88rem;
-
-    --font-ppMori: "PPMori", sans-serif;
-    --font-ppPangram: "PPPangram", sans-serif;
-    --font-icoMoon: "icomoon", sans-serif;
-    --icon-stars: '\e917';
-}
-@font-face {
-    font-family: PPMori;
-    src: url('/fonts/PPMori-Regular.otf');
-    src: url('/fonts/PPMori-Regular.otf#iefix') format('embedded-opentype'),
-    url('/fonts/PPMori-Regular.ttf') format('truetype'),
-    url('/fonts/PPMori-Regular.woff') format('woff'),
-    url('/fonts/PPMori-Regular.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: PPMori;
-    src: url('/fonts/PPMori-Bold.otf');
-    src: url('/fonts/PPMori-Bold.otf#iefix') format('embedded-opentype'),
-    url('/fonts/PPMori-Bold.ttf') format('truetype'),
-    url('/fonts/PPMori-Bold.woff') format('woff'),
-    url('/fonts/PPMori-Bold.woff2') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: PPMori;
-    src: url('/fonts/PPMori-RegularItalic.otf');
-    src: url('/fonts/PPMori-RegularItalic.otf#iefix') format('embedded-opentype'),
-    url('/fonts/PPMori-RegularItalic.ttf') format('truetype'),
-    url('/fonts/PPMori-RegularItalic.woff') format('woff'),
-    url('/fonts/PPMori-RegularItalic.woff2') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: PPPangram;
-    src: url('/fonts/PPPangramSansRounded-Bold.otf');
-    src: url('/fonts/PPPangramSansRounded-Bold.otf#iefix') format('embedded-opentype'),
-    url('/fonts/PPPangramSansRounded-Bold.ttf') format('truetype'),
-    url('/fonts/PPPangramSansRounded-Bold.woff') format('woff'),
-    url('/fonts/PPPangramSansRounded-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'icomoon';
@@ -88,9 +19,63 @@
     font-style: normal;
     font-display: block;
 }
-@utility container {
-    padding-inline: 1rem;
+@font-face {
+    font-family: 'Minion-Pro';
+    src: url('/fonts/MinionPro-Regular.woff2') format('woff2'),
+    url('/fonts/MinionPro-Regular.woff') format('woff'),
+    url('/fonts/MinionPro-Regular.svg#MinionPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Minion-Pro';
+    src: url('/fonts/MinionPro-Bold.woff2') format('woff2'),
+    url('/fonts/MinionPro-Bold.woff') format('woff'),
+    url('MinionPro-Bold.svg#MinionPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-minionpro: "Minion-Pro", sans-serif;
+    --font-icoMoon: "icomoon", sans-serif;
+    --icon-stars: '\e917';
+
+    --default-font-family: var(--font-minionpro), sans-serif;
+
+    --breakpoint-*: initial;
+    --breakpoint-mobile: 32.5rem  /* 520/16 */;
+    --breakpoint-tablet: 48rem  /* 768/16 */;
+    --breakpoint-desktop: 64rem  /* 1024/16 */;
+    --breakpoint-large: 80rem  /* 1280/16 */;
+    --breakpoint-xlarge: 90rem  /* 1440/16 */;
+    --breakpoint-xxlarge: 96.875rem  /* 1550/16 */;
+
+    --container-*: initial;
+    --container-mobile: 30.5rem;
+    --container-tablet: 46rem;
+    --container-desktop: 62rem;
+    --container-large: 78rem;
+    --container-xlarge: 88rem;
+    --container-xxlarge: 94.875rem;
+
+    --container-padding: 1rem;
+
+    --header-height-scrolled: 87px;
+    --header-height-no-scrolled: 133px;
+    --header-logo-height-no-scrolled-mobile: 100px;
+    --header-logo-height-no-scrolled-desktop: 130px;
+    --header-logo-height-scrolled: 70px;
+}
+@utility container {
+    padding-inline: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @layer base {
     h1, h2, h3, h4, h5, h6 {
         font-size: unset;
@@ -119,5 +104,46 @@
 
     h6 {
         font-size: clamp(1.044rem, 1.003rem + 0.206vw, 1.25rem);
+    }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .icon-facebook {
+        @apply before:content-['\e903'];
+    }
+    .icon-instagram {
+        @apply before:content-['\e904'];
+    }
+    .icon-youtube {
+        @apply before:content-['\e902'];
+    }
+    .icon-tiktok {
+        @apply before:content-['\e901'];
+    }
+    .icon-rss {
+        @apply before:content-['\e905'];
+    }
+    .icon-arrow-left {
+        @apply before:content-["\e907"];
+    }
+    .icon-arrow-right {
+        @apply before:content-["\e906"];
     }
 }
