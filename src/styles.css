@@ -38,6 +38,13 @@
     font-style: normal;
     font-display: swap;
 }
+@utility container {
+    padding-inline: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 @theme {
     --font-minionpro: "Minion-Pro", sans-serif;
@@ -71,14 +78,6 @@
     --header-logo-height-scrolled: 70px;
     --sticky-desktop: 184px;
     --section-margin: 70px;
-}
-@utility container {
-    padding-inline: var(--container-padding);
-    margin-left: auto;
-    margin-right: auto;
-}
-@utility verical-writing {
-    writing-mode: sideways-lr;
 }
 
 @layer base {
@@ -120,6 +119,32 @@
     button:not(:disabled),
     [role="button"]:not(:disabled) {
         cursor: pointer;
+    }
+
+    [data-animation] {
+        @apply invisible;
+    }
+    .fadeInRight {
+        @apply animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out visible;
+    }
+
+    .fadeInLeft {
+        @apply animate-fade-left animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out visible;
+    }
+
+    .jumpIn {
+        @apply animate-jump-in animate-once animate-duration-1000 animate-delay-0 animate-ease-in-out visible;
+    }
+
+    .fadeInUp {
+        @apply animate-fade-up animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out visible;
+    }
+
+    .fadeIn {
+        @apply animate-fade animate-once animate-duration-500 animate-delay-0 animate-ease-in-out visible;
+    }
+    .verical-writing {
+        writing-mode: sideways-lr;
     }
 
     [class^="icon-"], [class*=" icon-"] {

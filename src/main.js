@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const element = entry.target;
                 const animationClass = element.dataset.animation;
                 element.classList.add(animationClass);
+                element.classList.remove("invisible");
                 observer.unobserve(element); // Remove observer after animating once
             }
         });
