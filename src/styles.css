@@ -70,6 +70,7 @@
     --header-logo-height-no-scrolled-desktop: 130px;
     --header-logo-height-scrolled: 70px;
     --sticky-desktop: 184px;
+    --section-margin: 70px;
 }
 @utility container {
     padding-inline: var(--container-padding);
