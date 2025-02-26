@@ -27,7 +27,7 @@
             <span class="transition-all rounded origin-center duration-300 w-5 h-0.5 bg-black block group-[.active]:-rotate-45 group-[.active]:-translate-y-[0.22rem]"></span>
         </button>
     </div>
-    <div class="desktop:border-y-1 bg-white border-black px-4 flex flex-col max-desktop:duration-300 desktop:flex-row justify-between desktop:justify-center desktop:items-center max-desktop:fixed max-desktop:w-full max-desktop:group-data-[scrolled=false]:h-[calc(100%-var(--header-height-no-scrolled))] max-desktop:group-data-[scrolled=true]:h-[calc(100%-var(--header-height-scrolled))] max-desktop:group-data-[scrolled=false]:top-[var(--header-height-no-scrolled)] max-desktop:group-data-[scrolled=true]:top-[var(--header-height-scrolled)] max-desktop:left-full [&.active]:max-desktop:translate-x-[-100%]" id="navbar-sticky">
+    <div class="desktop:border-y-1 bg-white border-black px-4 flex flex-col max-desktop:duration-300 desktop:flex-row justify-between desktop:justify-center desktop:items-center max-desktop:fixed max-desktop:w-full max-desktop:group-data-[scrolled=false]:h-[calc(100%-var(--header-height-no-scrolled-mobile))] max-desktop:group-data-[scrolled=true]:h-[calc(100%-var(--header-height-scrolled-mobile))] max-desktop:group-data-[scrolled=false]:top-[var(--header-height-no-scrolled-mobile)] max-desktop:group-data-[scrolled=true]:top-[var(--header-height-scrolled-mobile)] max-desktop:left-full [&.active]:max-desktop:translate-x-[-100%]" id="navbar-sticky">
         <ul class="flex flex-col desktop:flex-row desktop:ml-auto max-desktop:space-y-4 desktop:space-x-4 py-5 text-lg leading-6">
             <li>
                 <a href="/beauty">Beauty</a>
@@ -63,71 +63,76 @@
 </header>
 
 <main class="@container/main container max-w-xxlarge">
-    <section class="mb-12 flex gap-8">
-        <div class="tablet:basis-[50%] desktop:flex-auto">
-            <article class="relative">
-                <picture class="">
-                    <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
-                    <img
-                        alt=""
-                        class=""
-                        width="954"
-                        height="537"
-                        src="https://placehold.co/954x537/2463EB/FFF">
-                </picture>
-                <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+    <section class="mb-12 grid desktop:grid-cols-[auto_500px] gap-8 ">
+        <div class="relative">
+            <article class="sticky top-[var(--sticky-desktop)]">
+                <a href="https://example.com" class="peer block mb-4">
+                    <picture class="">
+                        <source media="(min-width: 768px)" srcset="https://placehold.co/954x537/2463EB/FFF">
+                        <img alt="" aria-label="Photo" class="w-full" width="736" height="414" src="https://placehold.co/736x414/2463EB/FFF">
+                    </picture>
+                </a>
+                <h2 class="h3 peer-hover:underline">
+                    <a href="https://example.com" class="hover:underline">
+                        Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;
+                    </a>
+                </h2>
                 <p>Πόσα από τα παρακάτω έθιμα ήξερες ή είχες ακούσει;</p>
             </article>
         </div>
-        <div class="tablet:basis-[50%] desktop:flex-[0_0_500px] bg-red-100 ">
-            <div class="flex flex-wrap gap-8">
-                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
-                    <picture class="">
-                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
-                        <img
-                                alt=""
-                                class=""
-                                width="954"
-                                height="537"
-                                src="https://placehold.co/954x537/2463EB/FFF">
+        <div class="">
+            <div class="grid mobile:grid-cols-2 gap-8">
+                <article class="basis-full mobile:basis-[calc(50%-1rem)]">
+                    <a href="https://example.com" class="peer block mb-4">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="https://placehold.co/234x234/2463EB/FFF">
+                        <img alt="" aria-label="Photo" class="" width="480" height="480" src="https://placehold.co/480x480/2463EB/FFF">
                     </picture>
-                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                    </a>
+                    <h3 class="h5 peer-hover:underline">
+                        <a href="https://example.com" class="text-inherit hover:underline">
+                            Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;
+                        </a>
+                    </h3>
                 </article>
-                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
-                    <picture class="">
-                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
-                        <img
-                                alt=""
-                                class=""
-                                width="954"
-                                height="537"
-                                src="https://placehold.co/954x537/2463EB/FFF">
-                    </picture>
-                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                <article class="basis-full mobile:basis-[calc(50%-1rem)]">
+                    <a href="https://example.com" class="peer block mb-4">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="https://placehold.co/234x234/2463EB/FFF">
+                            <img alt="" aria-label="Photo" class="" width="480" height="480" src="https://placehold.co/480x480/2463EB/FFF">
+                        </picture>
+                    </a>
+                    <h3 class="h5 peer-hover:underline">
+                        <a href="https://example.com" class="text-inherit hover:underline">
+                            Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;
+                        </a>
+                    </h3>
                 </article>
-                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
-                    <picture class="">
-                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
-                        <img
-                                alt=""
-                                class=""
-                                width="954"
-                                height="537"
-                                src="https://placehold.co/954x537/2463EB/FFF">
-                    </picture>
-                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                <article class="basis-full mobile:basis-[calc(50%-1rem)]">
+                    <a href="https://example.com" class="peer block mb-4">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="https://placehold.co/234x234/2463EB/FFF">
+                            <img alt="" aria-label="Photo" class="" width="480" height="480" src="https://placehold.co/480x480/2463EB/FFF">
+                        </picture>
+                    </a>
+                    <h3 class="h5 peer-hover:underline">
+                        <a href="https://example.com" class="text-inherit hover:underline">
+                            Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;
+                        </a>
+                    </h3>
                 </article>
-                <article class="basis-full desktop:basis-[calc(50%-1rem)]">
-                    <picture class="">
-                        <source media="(max-width: 1024px)" srcset="https://placehold.co/954x537/2463EB/FFF">
-                        <img
-                                alt=""
-                                class=""
-                                width="954"
-                                height="537"
-                                src="https://placehold.co/954x537/2463EB/FFF">
-                    </picture>
-                    <h3>Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;</h3>
+                <article class="basis-full mobile:basis-[calc(50%-1rem)]">
+                    <a href="https://example.com" class="peer block mb-4">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="https://placehold.co/234x234/2463EB/FFF">
+                            <img alt="" aria-label="Photo" class="" width="480" height="480" src="https://placehold.co/480x480/2463EB/FFF">
+                        </picture>
+                    </a>
+                    <h3 class="h5 peer-hover:underline">
+                        <a href="https://example.com" class="text-inherit hover:underline">
+                            Ήξερες για αυτές τις γαμήλιες παραδόσεις στην Ελλάδα;
+                        </a>
+                    </h3>
                 </article>
             </div>
         </div>

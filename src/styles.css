@@ -64,11 +64,12 @@
 
     --container-padding: 1rem;
 
-    --header-height-scrolled: 87px;
-    --header-height-no-scrolled: 133px;
+    --header-height-scrolled-mobile: 87px;
+    --header-height-no-scrolled-mobile: 133px;
     --header-logo-height-no-scrolled-mobile: 100px;
     --header-logo-height-no-scrolled-desktop: 130px;
     --header-logo-height-scrolled: 70px;
+    --sticky-desktop: 184px;
 }
 @utility container {
     padding-inline: var(--container-padding);
@@ -82,28 +83,34 @@
         font-weight: var(--font-weight-bold);
     }
 
-    h1 {
+    .h1 {
         font-size: clamp(2.244rem, 1.930rem + 1.569vw, 3.813rem);
+        @apply leading-[1.2]
     }
 
-    h2 {
+    .h2 {
         font-size: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
+        @apply leading-[1.2]
     }
 
-    h3 {
+    .h3 {
         font-size: clamp(1.625rem, 1.462rem + 0.813vw, 2.438rem);
+        @apply leading-[1.2]
     }
 
-    h4 {
+    .h4 {
         font-size: clamp(1.381rem, 1.27rem + 0.557vw, 1.938rem);
+        @apply leading-[1.2]
     }
 
-    h5 {
+    .h5 {
         font-size: clamp(1.2rem, 1.127rem + 0.363vw, 1.563rem);
+        @apply leading-[1.2]
     }
 
-    h6 {
+    .h6 {
         font-size: clamp(1.044rem, 1.003rem + 0.206vw, 1.25rem);
+        @apply leading-[1.2]
     }
 
     button:not(:disabled),
