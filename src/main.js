@@ -14,10 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let timeout;
     window.addEventListener("scroll", () => {
-        clearTimeout(timeout);
+        // console.log(window.scrollY)
+        clearTimeout(timeout); // Clear any previous timeout
         timeout = setTimeout(() => {
-            body.setAttribute('data-scrolled', window.scrollY > 25);
-        }, 100);
+            body.setAttribute('data-scrolled', window.scrollY > 0 ? 'true' : 'false');
+        }, 10);
     });
 
     window.addEventListener("resize", () => {
