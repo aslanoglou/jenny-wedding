@@ -1,3 +1,4 @@
+import Glide from '@glidejs/glide'
 document.addEventListener("DOMContentLoaded", () => {
 
     const body = document.body;
@@ -42,10 +43,23 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el);
     });
 
-    const blackButtons = document.querySelectorAll('.btn-black');
-    blackButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('btn-black--outline');
-        });
-    });
+    new Glide('#brides-carousel', {
+        type: 'slider',
+        startAt: 0,
+        perView: 4,
+        loop: false,
+        gap:32,
+        bound: true,
+        breakpoints: {
+            1023: {
+                perView: 3
+            },
+            767: {
+                perView: 2
+            },
+            519: {
+                perView: 1
+            }
+        }
+    }).mount()
 });
